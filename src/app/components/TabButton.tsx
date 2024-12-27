@@ -1,6 +1,12 @@
 import React from "react";
 
-const TabButton = ({ active, selectTab, children }: any) => {
+interface button{
+  active:boolean,
+  selectTab:any,
+  children:string
+}
+
+const TabButton: React.FC<button> = ({ active, selectTab, children }) => {
   const buttonClasses = active
     ? "text-white border-b-2 border-purple-500"
     : "text-gray-400 border-b-2 border-transparent";

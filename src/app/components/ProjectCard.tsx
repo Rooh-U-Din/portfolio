@@ -2,7 +2,13 @@ import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }: any) => {
+interface cards {
+imgUrl:string,
+title:string,
+description:string
+}
+
+const ProjectCard:React.FC<cards> = ({ imgUrl, title, description,}) => {
   return (
     <div className="relative group ">
   <div

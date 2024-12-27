@@ -2,7 +2,7 @@ import React from "react";
 
 function Email() {
   return (
-    <div className="">
+    <div>
       <h1 className="text-center text-4xl font-bold text-white mt-4 p-4">Contect Me</h1>
         <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
 <div className="grid md:grid-cols-2 my-12 py-24 gap-4 ml-[50]">
@@ -34,9 +34,6 @@ function Email() {
         </div>
       </div>
     </div>
-
-
-
     </div>
   );
 }

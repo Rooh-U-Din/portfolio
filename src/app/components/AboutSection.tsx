@@ -2,8 +2,7 @@
 import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-import { Content } from "next/font/google";
-import { title } from "process";
+
 
 const Tab_Data = [
   {
@@ -34,9 +33,9 @@ const Tab_Data = [
 
 function AboutSection() {
   const [tab,setTab] = useState ("skills");
-  const [isPending,startTransition] = useTransition();
 
-  const handleTabChange = (id:any) => {
+
+  const handleTabChange = (id: React.SetStateAction<string>) => {
     setTab(id);
   }
 
