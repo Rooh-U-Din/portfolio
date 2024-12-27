@@ -1,13 +1,24 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
 
+interface card{
+  id: number,
+  title: string,
+  deacription: string,
+  image: string,
+  previewUrl: string,
+  gitUrl: string,
+  tag: string[]
+}
 
-const projectsData = [
+const projectsData:card[] = [
   {
     id: 1,
     title: "Resume",
     deacription: "Projects",
     image: "/photos/resume.png",
+    previewUrl: "https://milstone-1and2.vercel.app/",
+    gitUrl: "https://github.com/Rooh-U-Din/Milstone-1and2.git",
     tag: ["All", "Web"],
     
   },
@@ -16,6 +27,8 @@ const projectsData = [
     title: "Resume-builder",
     deacription: "Projects",
     image: "/photos/resumeBuilder.png",
+    previewUrl: "https://milestone-5-bice-six.vercel.app/",
+    gitUrl: "https://github.com/Rooh-U-Din/Milestone-5.git",
     tag: ["All", "Web"],
     
   },
@@ -24,6 +37,8 @@ const projectsData = [
     title: "Ecommers",
     deacription: "Projects",
     image: "/photos/ecommers.png",
+    previewUrl: "https://hackatho-design-02.vercel.app/",
+    gitUrl: "https://github.com/Rooh-U-Din/Hackatho-Design-02.git",
     tag: ["All", "Web"],
     
   },
@@ -40,6 +55,9 @@ function Projects() {
             title={project.title}
             description={project.deacription}
             imgUrl={project.image}
+            gitUrl={project.gitUrl}
+            previewUrl={project.previewUrl}
+
           />
         ))}
       </div>
