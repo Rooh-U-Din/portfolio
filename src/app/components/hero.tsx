@@ -6,8 +6,8 @@ import { TypeAnimation } from 'react-type-animation';
 function Hero() {
   return (
     <div>
-      <div className="sm:grid grid-cols-1 lg:grid-cols-12 mt-[80]">
-        <div className="col-span-7 place-self-center mr-28">
+      <div className="sm:grid grid-cols-1 lg:grid-cols-12 md:mt-[80] sm:absolute md:ml-[20]">
+        <div className="col-span-7 place-self-center md:mr-28">
           <h1 className="text-white mb-6 text-4xl lg:text-8xl lg:ml-28">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500"> Hello Im </span> 
             <div className="mt-[60]"></div>

@@ -31,7 +31,7 @@ const projectsData = [
 
 function Projects() {
   return (
-    <div>
+    <div className=''>
       <h2 className='text-center text-4xl font-bold text-white mt-4 p-4'>My Projects</h2>
       <div className='grid md:grid-cols-3 mt-9 mx-12 gap-4'>
         {projectsData.map((project) => (
