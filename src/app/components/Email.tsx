@@ -15,7 +15,7 @@ function Email() {
         </p>
         <div className="socials flex flex-row gap-2">
         <a
-        href="https://github.com"
+        href="https://github.com/Rooh-U-Din"
         target="_blank"
         rel="noopener noreferrer"
       >
