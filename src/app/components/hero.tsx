@@ -37,13 +37,13 @@ function Hero() {
           <button className="bg-black text-white px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-600 hover:bg-white hover:text-black border border-white mt-3 " >Download CV</button>
           </div>
         </div>
-        <div className="col-span-5 place-self-center mr-24 mt-4 lg:mt-0">
-            <div className="rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[300] lg:w-[300] relative">
-            <Image src="/photos/profile.jpeg"
+        <div className="col-span-5 place-self-center mr-24 mt-4 lg:mt-0 overflow-hidden rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[400] lg:w-[400] ">
+            <div className="">
+            <Image src="/photos/profile.png"
             alt="profile"
-            className="ml-[50] py-[25%] h-[250] w-[200] lg:h-[300] lg:w-[200]"
-            height={300}
-            width={300}></Image>
+            className="object-cover py-[25%] mt-[-100]  h-[450] w-[400] lg:h-[700] lg:w-[700] lg:mt-[-200px] lg:ml-[-10] rounded-full"
+            height={1100}
+            width={1100}></Image>
             </div>
 
         </div>
