@@ -1,6 +1,7 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
 
+
 const projectsData = [
   {
     id: 1,
@@ -8,8 +9,7 @@ const projectsData = [
     deacription: "Projects",
     image: "/photos/resume.png",
     tag: ["All", "Web"],
-    gitUrl:"/",
-    previewUrl:"/"
+    
   },
   {
     id: 2,
@@ -17,8 +17,7 @@ const projectsData = [
     deacription: "Projects",
     image: "/photos/resumeBuilder.png",
     tag: ["All", "Web"],
-    gitUrl:"/",
-    previewUrl:"/"
+    
   },
   {
     id: 3,
@@ -26,8 +25,7 @@ const projectsData = [
     deacription: "Projects",
     image: "/photos/ecommers.png",
     tag: ["All", "Web"],
-    gitUrl:"/",
-    previewUrl:"/"
+    
   },
 ];
 
@@ -42,8 +40,6 @@ function Projects() {
             title={project.title}
             description={project.deacription}
             imgUrl={project.image}
-            gitUrl={project.gitUrl}
-            previewUrl={project.previewUrl}
           />
         ))}
       </div>
