@@ -7,10 +7,10 @@ function Email() {
         <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
 <div className="grid md:grid-cols-2 my-12 py-24 gap-4 ml-[50]">
       <div className="">
-        <h5 className="text-xl font-bold text-white my-2">Let's Conntect</h5>
+        <h5 className="text-xl font-bold text-white my-2">Lets Conntect</h5>
         <p className="text-gray-200 mb-4 max-w-md">
           Im currently looking for new opportunities, my inbox is alwas open.
-          Whether you have a quistion or just want to say hi, i'll try mr best
+          Whether you have a quistion or just want to say hi, ill try mr best
           to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">

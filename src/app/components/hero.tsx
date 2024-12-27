@@ -9,7 +9,7 @@ function Hero() {
       <div className="sm:grid grid-cols-1 lg:grid-cols-12 mt-[80]">
         <div className="col-span-7 place-self-center mr-28">
           <h1 className="text-white mb-6 text-4xl lg:text-8xl lg:ml-28">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500"> Hello, I'm </span> 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500"> Hello Im </span> 
             <div className="mt-[60]"></div>
             <span style={{ display: 'inline-block', width: '16ch',}}>
             <TypeAnimation

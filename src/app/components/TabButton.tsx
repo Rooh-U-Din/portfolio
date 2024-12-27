@@ -1,8 +1,8 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
 interface button{
   active:boolean,
-  selectTab:any,
+  selectTab:MouseEventHandler<HTMLButtonElement>,
   children:string
 }
 
