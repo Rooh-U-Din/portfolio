@@ -6,7 +6,7 @@ import { TypeAnimation } from 'react-type-animation';
 function Hero() {
   return (
     <div>
-      <div className="sm:grid grid-cols-1 lg:grid-cols-12 md:mt-[80] sm:absolute md:ml-[20]">
+      <div className="sm:grid grid-cols-1 lg:grid-cols-12 md:mt-[80] md:ml-[20]">
         <div className="col-span-7 place-self-center md:mr-28">
           <h1 className="text-white mb-6 text-4xl lg:text-8xl lg:ml-28">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500"> Hello Im </span> 
@@ -41,7 +41,7 @@ function Hero() {
             <div className="rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[300] lg:w-[300] relative">
             <Image src="/photos/profile.jpeg"
             alt="profile"
-            className="mx-auto py-[25%] h-[250] w-[200] lg:h-[300] lg:w-[200]"
+            className="ml-[50] py-[25%] h-[250] w-[200] lg:h-[300] lg:w-[200]"
             height={300}
             width={300}></Image>
             </div>
