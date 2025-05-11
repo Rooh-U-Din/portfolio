@@ -7,14 +7,14 @@ import { TypeAnimation } from "react-type-animation";
 function Hero() {
   return (
     <div>
-      <div className="sm:grid grid-cols-1 lg:grid-cols-12 md:mt-[80px] md:ml-[20px]">
+      <div className="mx-auto sm:grid grid-cols-1 lg:grid-cols-12 md:mt-[80px] md:ml-[20px]">
         <div className="col-span-7 place-self-center md:mr-28">
           <h1 className="text-white mb-6 text-4xl lg:text-8xl lg:ml-28">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
               {" "}
               Hello I am{" "}
             </span>
-            <div className="mt-[60px]"></div>
+            <div className="md:mt-[20px]"></div>
             <span style={{ display: "inline-block", width: "16ch" }}>
               <TypeAnimation
                 sequence={[
@@ -37,7 +37,7 @@ function Hero() {
             </span>
           </h1>
           <p className="text-gray-200 text-lg lg:text-2xl lg:ml-28">
-            Portfolio for school assignment
+            Portfolio website of Rooh-U-Din
           </p>
           <div>
             <Link href={"#contact"}>
@@ -45,12 +45,14 @@ function Hero() {
                 Contact  {/* Fixed spelling from "Contect" */}
               </button>
             </Link>
+            <Link href={"#projects"}>
             <button className="bg-black text-white px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-600 hover:bg-white hover:text-black border border-white mt-3">
-              Download CV
+              Projects
             </button>
+            </Link>
           </div>
         </div>
-        <div className="col-span-5 place-self-center mr-24 mt-4 lg:mt-0 overflow-hidden rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[400px] lg:w-[400px]">
+        <div className=" col-span-5 place-self-center mx-auto mt-4 lg:mt-0 overflow-hidden rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[400px] lg:w-[400px] ">
           <div className="relative h-full w-full">
             <Image
               src="/photos/profile.png"
