@@ -7,7 +7,7 @@ const Email= () => {
     <section id="contact" className=" text-gray-300 py-16 border-gray-50">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
-          Let's Connect
+          Let`s Connect
         </h2>
 
         <div className="grid grid-cols-1 md:flex justify-between mx-4">
@@ -15,8 +15,8 @@ const Email= () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-white">My Portfolio</h3>
             <p className="text-gray-200 mb-6 max-w-md">
-              I'm currently seeking new opportunities, and my inbox is always
-              open. Whether you have a question or just want to say hello, I'll do
+              I`m currently seeking new opportunities, and my inbox is always
+              open. Whether you have a question or just want to say hello, I`ll do
               my best to get back to you promptly!
             </p>
             
