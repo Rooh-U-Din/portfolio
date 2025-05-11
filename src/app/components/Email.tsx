@@ -1,47 +1,77 @@
 import React from "react";
+import Link from 'next/link';
+import { FaGithub, FaLinkedin, FaEnvelope,} from 'react-icons/fa';
 
-function Email() {
+const Email= () => {
   return (
-    <div id="contact">
-      <h1 className="text-center text-4xl font-bold text-white mt-4 p-4">
-        Contect Me
-      </h1>
-      <link
-        href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
-        rel="stylesheet"
-      />
-      <div className="grid md:grid-cols-2 my-12 py-24 gap-4 ml-[50]">
-        <div className="">
-          <h5 className="text-xl font-bold text-white my-2">Lets Conntect</h5>
-          <p className="text-gray-200 mb-4 max-w-md">
-            I am currently seeking new opportunities, and my inbox is always
-            open. Whether you have a question or just want to say hello, I will do
-            my best to get back to you promptly!
-          </p>
-          <div className="socials flex flex-row gap-2">
-            <a
-              href="https://github.com/Rooh-U-Din"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="bx bxl-github text-3xl text-gray-800 hover:text-black bg-white rounded-sm"></i>
-            </a>
-            <a
-              href="https://linkedin.com/in/your-username"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="bx bxl-linkedin text-3xl text-black hover:text-blue-800 bg-white rounded-sm"></i>
-            </a>
-            <i className="bx bxs-envelope text-3xl text-white hover:text-blue-600"></i>
-            <span className="text-white mb-3 text-xl">
-              fidajokhio2@gmail.com
-            </span>
+    <section id="contact" className=" text-gray-300 py-16 border-gray-50">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
+          Let's Connect
+        </h2>
+
+        <div className="grid grid-cols-1 md:flex justify-between mx-4">
+          {/* Brand Information */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-semibold text-white">My Portfolio</h3>
+            <p className="text-gray-200 mb-6 max-w-md">
+              I'm currently seeking new opportunities, and my inbox is always
+              open. Whether you have a question or just want to say hello, I'll do
+              my best to get back to you promptly!
+            </p>
+            
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-6">Contact Me</h3>
+              
+              <div className="flex space-x-4">
+              <SocialIcon 
+                href="https://github.com/Rooh-U-Din" 
+                icon={<FaGithub size={20} />}
+                label="GitHub"
+              />
+              <SocialIcon 
+                href="https://linkedin.com/in/your-username" 
+                icon={<FaLinkedin size={20} />}
+                label="LinkedIn"
+              />
+              <SocialIcon 
+                href="mailto:fidajokhio2@gmail.com" 
+                icon={<FaEnvelope size={20} />}
+                label="Email"
+              />
+            </div>
+              <p className="text-blue-400 font-medium">
+                Available for freelance opportunities
+              </p>
+              </div>
           </div>
         </div>
-      </div>
-    </div>
+    </section>
   );
-}
+};
+
+// Reusable Social Icon Component
+const SocialIcon = ({ href, icon, label }) => (
+  <Link
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-400 hover:text-white transition-colors p-2 rounded-full hover:bg-gray-800"
+    aria-label={label}
+  >
+    {icon}
+  </Link>
+);
+
+// Reusable Navigation Link Component
+const NavLink = ({ href, text }) => (
+  <li>
+    <Link href={href} className="text-gray-400 hover:text-white transition-colors block py-1.5">
+       
+        {text}
+    </Link>
+  </li>
+);
 
 export default Email;

@@ -1,14 +1,23 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div>
-      <div className=' w-full h-px bg-gray-600 text-white mb-[90]'></div>
-      <div className='absolute flex justify-between text-white  mt-[-70] mx-[20]'>
-        <span className='text-5xl font-bold'>Portfolio</span>
+    <footer className=" text-gray-300 border-y-[1px] border-gray-500 px-4">
+      <div className="container mx-auto px-6 py-12 md:flex justify-between">  
+        <p className="mt-2">
+            Built with Next.js and Tailwind CSS
+          </p> 
+          <p>
+            &copy; {currentYear} Portfolio. All rights reserved.
+          </p>
+          
         </div>
-    </div>
-  )
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
