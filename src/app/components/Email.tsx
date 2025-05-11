@@ -1,6 +1,15 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaEnvelope,} from 'react-icons/fa';
+
+
+interface SocialIconProps {
+  href: string;
+  icon: ReactNode;
+  label: string;
+}
+
+
 
 const Email= () => {
   return (
@@ -51,7 +60,7 @@ const Email= () => {
 };
 
 // Reusable Social Icon Component
-const SocialIcon = ({ href, icon, label }) => (
+const SocialIcon = ({ href, icon, label }: SocialIconProps) => (
   <Link
     href={href}
     target="_blank"
