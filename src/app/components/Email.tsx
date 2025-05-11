@@ -11,7 +11,6 @@ const Email= () => {
         </h2>
 
         <div className="grid grid-cols-1 md:flex justify-between mx-4">
-          {/* Brand Information */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-white">My Portfolio</h3>
             <p className="text-gray-200 mb-6 max-w-md">
@@ -62,16 +61,6 @@ const SocialIcon = ({ href, icon, label }) => (
   >
     {icon}
   </Link>
-);
-
-// Reusable Navigation Link Component
-const NavLink = ({ href, text }) => (
-  <li>
-    <Link href={href} className="text-gray-400 hover:text-white transition-colors block py-1.5">
-       
-        {text}
-    </Link>
-  </li>
 );
 
 export default Email;
