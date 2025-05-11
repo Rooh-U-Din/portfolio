@@ -42,11 +42,38 @@ const projectsData:card[] = [
     tag: ["All", "Web"],
     
   },
+  {
+    id: 4,
+    title: "Full-stack Ecommers",
+    deacription: "Projects",
+    image:"/photos/full_stack.png",
+    previewUrl:"https://hackathon-day-4-bhzy.vercel.app/",
+    gitUrl:"https://github.com/Rooh-U-Din/Hackathon-Day-4.git",
+    tag: ["All", "Web"],
+  },
+  {
+    id: 5,
+    title: "Secure data encryption",
+    deacription: "Projects",
+    image:"/photos/data_encryption.png",
+    previewUrl:"https://assignment-5-by-rooh.streamlit.app/",
+    gitUrl:"https://github.com/Rooh-U-Din/05_secure_data_encryption.git",
+    tag: ["All", "Web"],
+  },
+  {
+    id: 6,
+    title: "Tap To Earn",
+    deacription: "Projects",
+    image:"/photos/tap_to_earn.png",
+    previewUrl:"https://growth-mindset-taptoearn-ddxsab6u4qmxopcbnhalh7.streamlit.app/",
+    gitUrl:"https://github.com/Rooh-U-Din/Growth-mindset-tapToEarn.git",
+    tag: ["All", "Web"],
+  }
 ];
 
 function Projects() {
   return (
-    <div className=''>
+    <div className='' id='projects'>
       <h2 className='text-center text-4xl font-bold text-white mt-4 p-4'>My Projects</h2>
       <div className='grid md:grid-cols-3 mt-9 mx-12 gap-4'>
         {projectsData.map((project) => (

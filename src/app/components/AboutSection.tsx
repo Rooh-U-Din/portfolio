@@ -1,61 +1,75 @@
 "use client";
-import React, { useState,} from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
-
 const Tab_Data = [
   {
-    title:"Skills",
-    id:"skills",
-    Content:(
+    title: "Skills",
+    id: "skills",
+    Content: (
       <ul className="list-disc pl-2">
         <li>HTML</li>
         <li>CSS</li>
         <li>Javascript</li>
         <li>Typescript</li>
         <li>NextJS</li>
+        <li>Python</li>
       </ul>
-    )
+    ),
   },
   {
-    title:"Education",
-    id:"education",
-    Content:(
+    title: "Education",
+    id: "education",
+    Content: (
       <ul className="list-disc pl-2">
         <li>Metric</li>
         <li>Inter</li>
-        <li>Programing Learning</li>
+        <li>Programming Learning</li>
       </ul>
-    )
-  }
-]
+    ),
+  },
+];
 
 function AboutSection() {
-  const [tab,setTab] = useState ("skills");
-
+  const [tab, setTab] = useState("skills");
 
   const handleTabChange = (id: React.SetStateAction<string>) => {
     setTab(id);
-  }
+  };
 
   return (
-    <div className="text-white mt-[100] ">
+    <div className="text-white mt-[100] " id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image src="/photos/pc.png" alt="img" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I am student at giaic i am learing programing i have <br />
-            learned HTML,CSS,JAVASCRIPT/TYPESCRIPT and <br />
-            NextJS i am a quick learner and iam always looking for <br /> expend
-            my knowledge and skill.
+          <p className="text-base lg:text-lg w-[450]">
+            I am a dedicated programming student at GIAIC with hands-on
+            experience in modern web technologies. I have developed a solid
+            foundation in HTML, CSS, JavaScript/TypeScript, and Next.js, and I
+            am currently expanding my expertise in Python and Agentic AI. I’m a
+            quick learner who is passionate about technology and committed to
+            continuously growing my knowledge and skills to build innovative and
+            impactful solutions.
           </p>
           <div className="flex flex-row justify-start mt-8">
-            <TabButton selectTab={()=> handleTabChange("skills")}active={(tab==="skills")}>Skills</TabButton>
-            <TabButton selectTab={()=> handleTabChange("education")}active={(tab==="education")}>Education</TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("skills")}
+              active={tab === "skills"}
+            >
+              Skills
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("education")}
+              active={tab === "education"}
+            >
+              Education
+            </TabButton>
           </div>
-          <div className="mt-8">{Tab_Data.find((t) => t.id===tab)?.Content}</div>
+          <div className="mt-8">
+            {Tab_Data.find((t) => t.id === tab)?.Content}
+          </div>
         </div>
       </div>
     </div>
