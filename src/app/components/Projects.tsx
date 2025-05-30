@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard'
 interface card{
   id: number,
   title: string,
-  deacription: string,
+  description: string,
   image: string,
   previewUrl: string,
   gitUrl: string,
@@ -15,7 +15,7 @@ const projectsData:card[] = [
   {
     id: 1,
     title: "Resume",
-    deacription: "Projects",
+    description: "Projects",
     image: "/photos/resume.png",
     previewUrl: "https://milstone-1and2.vercel.app/",
     gitUrl: "https://github.com/Rooh-U-Din/Milstone-1and2.git",
@@ -25,7 +25,7 @@ const projectsData:card[] = [
   {
     id: 2,
     title: "Resume-builder",
-    deacription: "Projects",
+    description: "Projects",
     image: "/photos/resumeBuilder.png",
     previewUrl: "https://milestone-5-bice-six.vercel.app/",
     gitUrl: "https://github.com/Rooh-U-Din/Milestone-5.git",
@@ -35,7 +35,7 @@ const projectsData:card[] = [
   {
     id: 3,
     title: "Ecommers",
-    deacription: "Projects",
+    description: "Projects",
     image: "/photos/ecommers.png",
     previewUrl: "https://hackatho-design-02.vercel.app/",
     gitUrl: "https://github.com/Rooh-U-Din/Hackatho-Design-02.git",
@@ -45,16 +45,16 @@ const projectsData:card[] = [
   {
     id: 4,
     title: "Full-stack Ecommers",
-    deacription: "Projects",
+    description: "Projects",
     image:"/photos/full_stack.png",
-    previewUrl:"https://hackathon-day-4-bhzy.vercel.app/",
+    previewUrl:"https://hackathon-day-4-tawny.vercel.app/",
     gitUrl:"https://github.com/Rooh-U-Din/Hackathon-Day-4.git",
     tag: ["All", "Web"],
   },
   {
     id: 5,
     title: "Secure data encryption",
-    deacription: "Projects",
+    description: "Projects",
     image:"/photos/data_encryption.png",
     previewUrl:"https://assignment-5-by-rooh.streamlit.app/",
     gitUrl:"https://github.com/Rooh-U-Din/05_secure_data_encryption.git",
@@ -63,10 +63,37 @@ const projectsData:card[] = [
   {
     id: 6,
     title: "Tap To Earn",
-    deacription: "Projects",
+    description: "Projects",
     image:"/photos/tap_to_earn.png",
     previewUrl:"https://growth-mindset-taptoearn-ddxsab6u4qmxopcbnhalh7.streamlit.app/",
     gitUrl:"https://github.com/Rooh-U-Din/Growth-mindset-tapToEarn.git",
+    tag: ["All", "Web"],
+  },
+  {
+    id: 7,
+    title: "Blog",
+    description: "Projects",
+    image:"/photos/blog.jpg",
+    previewUrl:"https://bilog-five.vercel.app/",
+    gitUrl:"https://github.com/Rooh-U-Din/Bilog",
+    tag: ["All", "Web"],
+  },
+  {
+    id: 8,
+    title: "Video Downloader",
+    description: "Projects",
+    image:"/photos/video-downloader.png",
+    previewUrl:"https://video-downloader-by-fida.streamlit.app/",
+    gitUrl:"https://github.com/Rooh-U-Din/video-downloader.git",
+    tag: ["All", "Web"],
+  },
+  {
+    id: 9,
+    title: "Password Strength",
+    description: "Projects",
+    image:"/photos/password.png",
+    previewUrl:"https://passwordstrength-frexdonavrgftruxvpwi6c.streamlit.app/",
+    gitUrl:"https://github.com/Rooh-U-Din/Password_Strength.git",
     tag: ["All", "Web"],
   }
 ];
@@ -80,7 +107,7 @@ function Projects() {
           <ProjectCard
             key={project.id}
             title={project.title}
-            description={project.deacription}
+            description={project.description}
             imgUrl={project.image}
             gitUrl={project.gitUrl}
             previewUrl={project.previewUrl}
