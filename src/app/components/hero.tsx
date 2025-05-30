@@ -43,12 +43,12 @@ function Hero() {
           </p>
           <div>
             <Link href={"#contact"}>
-              <button className="bg-black text-black px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-gray-400 via-white hover:bg-white hover:text-black border border-white lg:ml-28">
-                Contact  {/* Fixed spelling from "Contect" */}
+              <button className="bg-black text-black px-6 py-3 rounded-md mr-4 bg-gradient-to-br from-gray-400 via-white hover:bg-white hover:text-black  lg:ml-28">
+                Contact
               </button>
             </Link>
             <Link href={"#projects"}>
-            <button className="bg-black text-black px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-gray-400 via-white hover:bg-white hover:text-black border border-white mt-3">
+            <button className="bg-black text-black px-6 py-3 rounded-md mr-4 bg-gradient-to-br from-gray-400 via-white hover:bg-white hover:text-black  mt-3">
               Projects
             </button>
             </Link>

@@ -1,17 +1,18 @@
-import React from 'react'
-import ProjectCard from './ProjectCard'
+'use client'
+import React, { useState } from 'react';
+import ProjectCard from './ProjectCard';
 
-interface card{
-  id: number,
-  title: string,
-  description: string,
-  image: string,
-  previewUrl: string,
-  gitUrl: string,
-  tag: string[]
+interface Card {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  previewUrl: string;
+  gitUrl: string;
+  tag: string[];
 }
 
-const projectsData:card[] = [
+const projectsData: Card[] = [
   {
     id: 1,
     title: "Resume",
@@ -20,7 +21,6 @@ const projectsData:card[] = [
     previewUrl: "https://milstone-1and2.vercel.app/",
     gitUrl: "https://github.com/Rooh-U-Din/Milstone-1and2.git",
     tag: ["All", "Web"],
-    
   },
   {
     id: 2,
@@ -30,7 +30,6 @@ const projectsData:card[] = [
     previewUrl: "https://milestone-5-bice-six.vercel.app/",
     gitUrl: "https://github.com/Rooh-U-Din/Milestone-5.git",
     tag: ["All", "Web"],
-    
   },
   {
     id: 3,
@@ -40,70 +39,73 @@ const projectsData:card[] = [
     previewUrl: "https://hackatho-design-02.vercel.app/",
     gitUrl: "https://github.com/Rooh-U-Din/Hackatho-Design-02.git",
     tag: ["All", "Web"],
-    
   },
   {
     id: 4,
     title: "Full-stack Ecommers",
     description: "Projects",
-    image:"/photos/full_stack.png",
-    previewUrl:"https://hackathon-day-4-tawny.vercel.app/",
-    gitUrl:"https://github.com/Rooh-U-Din/Hackathon-Day-4.git",
+    image: "/photos/full_stack.png",
+    previewUrl: "https://hackathon-day-4-tawny.vercel.app/",
+    gitUrl: "https://github.com/Rooh-U-Din/Hackathon-Day-4.git",
     tag: ["All", "Web"],
   },
   {
     id: 5,
     title: "Secure data encryption",
     description: "Projects",
-    image:"/photos/data_encryption.png",
-    previewUrl:"https://assignment-5-by-rooh.streamlit.app/",
-    gitUrl:"https://github.com/Rooh-U-Din/05_secure_data_encryption.git",
+    image: "/photos/data_encryption.png",
+    previewUrl: "https://assignment-5-by-rooh.streamlit.app/",
+    gitUrl: "https://github.com/Rooh-U-Din/05_secure_data_encryption.git",
     tag: ["All", "Web"],
   },
   {
     id: 6,
     title: "Tap To Earn",
     description: "Projects",
-    image:"/photos/tap_to_earn.png",
-    previewUrl:"https://growth-mindset-taptoearn-ddxsab6u4qmxopcbnhalh7.streamlit.app/",
-    gitUrl:"https://github.com/Rooh-U-Din/Growth-mindset-tapToEarn.git",
+    image: "/photos/tap_to_earn.png",
+    previewUrl: "https://growth-mindset-taptoearn-ddxsab6u4qmxopcbnhalh7.streamlit.app/",
+    gitUrl: "https://github.com/Rooh-U-Din/Growth-mindset-tapToEarn.git",
     tag: ["All", "Web"],
   },
   {
     id: 7,
     title: "Blog",
     description: "Projects",
-    image:"/photos/blog.jpg",
-    previewUrl:"https://bilog-five.vercel.app/",
-    gitUrl:"https://github.com/Rooh-U-Din/Bilog",
+    image: "/photos/blog.jpg",
+    previewUrl: "https://bilog-five.vercel.app/",
+    gitUrl: "https://github.com/Rooh-U-Din/Bilog",
     tag: ["All", "Web"],
   },
   {
     id: 8,
     title: "Video Downloader",
     description: "Projects",
-    image:"/photos/video-downloader.png",
-    previewUrl:"https://video-downloader-by-fida.streamlit.app/",
-    gitUrl:"https://github.com/Rooh-U-Din/video-downloader.git",
+    image: "/photos/video-downloader.png",
+    previewUrl: "https://video-downloader-by-fida.streamlit.app/",
+    gitUrl: "https://github.com/Rooh-U-Din/video-downloader.git",
     tag: ["All", "Web"],
   },
   {
     id: 9,
     title: "Password Strength",
     description: "Projects",
-    image:"/photos/password.png",
-    previewUrl:"https://passwordstrength-frexdonavrgftruxvpwi6c.streamlit.app/",
-    gitUrl:"https://github.com/Rooh-U-Din/Password_Strength.git",
+    image: "/photos/password.png",
+    previewUrl: "https://passwordstrength-frexdonavrgftruxvpwi6c.streamlit.app/",
+    gitUrl: "https://github.com/Rooh-U-Din/Password_Strength.git",
     tag: ["All", "Web"],
-  }
+  },
 ];
 
 function Projects() {
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedProjects = showAll ? projectsData : projectsData.slice(0, 3);
+
   return (
-    <div className='' id='projects'>
-      <h2 className='text-center text-4xl font-bold text-white mt-4 p-4'>My Projects</h2>
-      <div className='grid md:grid-cols-3 mt-9 mx-12 gap-4'>
-        {projectsData.map((project) => (
+    <div id="projects">
+      <h2 className="text-center text-4xl font-bold text-white mt-4 p-4">My Projects</h2>
+      <div className="grid md:grid-cols-3 mt-9 mx-12 gap-4">
+        {displayedProjects.map((project) => (
           <ProjectCard
             key={project.id}
             title={project.title}
@@ -111,13 +113,20 @@ function Projects() {
             imgUrl={project.image}
             gitUrl={project.gitUrl}
             previewUrl={project.previewUrl}
-
           />
         ))}
+      </div>
+
+     <div className="flex justify-center mt-6">
+        <button
+          onClick={() => setShowAll(!showAll)}
+         className="bg-black text-black px-6 py-3 rounded-md mr-4 bg-gradient-to-br from-gray-400 via-white hover:bg-white hover:text-black  lg:ml-28">
+            
+          {showAll ? 'Show Less' : 'View More'}
+        </button>
       </div>
     </div>
   );
 }
 
 export default Projects;
-
