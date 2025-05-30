@@ -34,7 +34,7 @@ const Navbar = () => {
           {/* Logo/Brand */}
           <Link href="/" className="group">
             <motion.span 
-              className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent"
+              className="text-3xl font-bold bg-gradient-to-r from-gray-300 to-white bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
             >
               Portfolio

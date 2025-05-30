@@ -10,13 +10,14 @@ function Hero() {
       <div className="mx-auto sm:grid grid-cols-1 lg:grid-cols-12 md:mt-[80px] md:ml-[20px]">
         <div className="col-span-7 place-self-center md:mr-28">
           <h1 className="text-white mb-6 text-4xl lg:text-8xl lg:ml-28">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white ">
               {" "}
               Hello I am{" "}
             </span>
             <div className="md:mt-[20px]"></div>
-            <span style={{ display: "inline-block", width: "16ch" }}>
-              <TypeAnimation
+            <span style={{ display: "inline-block", width: "16ch" }}
+            className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white ">
+              <TypeAnimation 
                 sequence={[
                   "Rooh-U-Din",
                   1000,
@@ -32,6 +33,7 @@ function Hero() {
                 ]}
                 wrapper="span"
                 speed={50}
+                
                 repeat={Infinity}
               />
             </span>
@@ -41,12 +43,12 @@ function Hero() {
           </p>
           <div>
             <Link href={"#contact"}>
-              <button className="bg-black text-white px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-600 hover:bg-white hover:text-black border border-white lg:ml-28">
+              <button className="bg-black text-black px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-gray-400 via-white hover:bg-white hover:text-black border border-white lg:ml-28">
                 Contact  {/* Fixed spelling from "Contect" */}
               </button>
             </Link>
             <Link href={"#projects"}>
-            <button className="bg-black text-white px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-600 hover:bg-white hover:text-black border border-white mt-3">
+            <button className="bg-black text-black px-6 py-3 rounded-full mr-4 bg-gradient-to-br from-gray-400 via-white hover:bg-white hover:text-black border border-white mt-3">
               Projects
             </button>
             </Link>
