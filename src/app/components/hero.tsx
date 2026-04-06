@@ -19,7 +19,7 @@ function Hero() {
             className="text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] to-[#1E3A8A] ">
               <TypeAnimation 
                 sequence={[
-                  "Rooh-U-Din",
+                  "Fida",
                   1000,
                   "Student",
                   1000,
@@ -39,7 +39,7 @@ function Hero() {
             </span>
           </h1>
           <p className="text-[#1E3A8A] text-lg lg:text-2xl lg:ml-28">
-            Portfolio website of Rooh-U-Din
+            Portfolio website of Fida
           </p>
           <div>
             <Link href={"#contact"}>
