@@ -43,12 +43,12 @@ const Email = () => {
                 label="GitHub"
               />
               <SocialIcon
-                href="https://linkedin.com/in/your-username"
+                href="https://www.linkedin.com/in/fida-j-01588b3b3?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 icon={<FaLinkedin size={22} />}
                 label="LinkedIn"
               />
               <SocialIcon
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=fidajokhio2@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=fidahussain00772@gmail.com"
                 icon={<FaEnvelope size={22} />}
                 label="Email"
               />
