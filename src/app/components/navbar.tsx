@@ -103,9 +103,11 @@ const Navbar = () => {
                   {link.title}
                 </Link>
               ))}
-              <button className="w-full bg-[#3B82F6] text-white py-4 rounded-xl font-bold">
-                Hire Me
-              </button>
+              <Link href="#contact">
+                <button className="w-full bg-[#3B82F6] text-white py-4 rounded-xl font-bold">
+                  Hire Me
+                </button>
+              </Link>
             </div>
           </motion.div>
         )}
