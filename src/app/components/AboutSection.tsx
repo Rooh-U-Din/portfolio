@@ -8,7 +8,7 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-5 grid grid-cols-2 gap-y-2 text-[#334155] font-medium">
+      <ul className="list-disc pl-5  text-[#334155] font-medium">
         <li className="marker:text-[#3B82F6]">HTML</li>
         <li className="marker:text-[#3B82F6]">CSS</li>
         <li className="marker:text-[#3B82F6]">Javascript</li>
@@ -46,11 +46,12 @@ const TAB_DATA = [
 
 function AboutSection() {
   const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
+  const [ ,startTransition] = useTransition();
 
   const handleTabChange = (id: string) => {
     startTransition(() => {
       setTab(id);
+    
     });
   };
 
