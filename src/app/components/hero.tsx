@@ -10,13 +10,13 @@ function Hero() {
       <div className="mx-auto sm:grid grid-cols-1 lg:grid-cols-12 md:mt-[80px] md:ml-[20px]">
         <div className="col-span-7 place-self-center md:mr-28">
           <h1 className="text-white mb-6 text-4xl lg:text-8xl lg:ml-28">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white ">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] to-[#1E3A8A]">
               {" "}
               Hello I am{" "}
             </span>
             <div className="md:mt-[20px]"></div>
             <span style={{ display: "inline-block", width: "16ch" }}
-            className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white ">
+            className="text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] to-[#1E3A8A] ">
               <TypeAnimation 
                 sequence={[
                   "Rooh-U-Din",
@@ -38,23 +38,23 @@ function Hero() {
               />
             </span>
           </h1>
-          <p className="text-gray-200 text-lg lg:text-2xl lg:ml-28">
+          <p className="text-[#1E3A8A] text-lg lg:text-2xl lg:ml-28">
             Portfolio website of Rooh-U-Din
           </p>
           <div>
             <Link href={"#contact"}>
-              <button className="bg-black text-black px-6 py-3 rounded-md mr-4 bg-gradient-to-br from-gray-400 via-white hover:bg-white hover:text-black  lg:ml-28">
+              <button className="bg-gradient-to-r from-[#3B82F6] to-[#1E3A8A] text-[#F8FAFC] px-6 py-3 rounded-md mr-4 lg:ml-28 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 active:scale-95">
                 Contact
               </button>
             </Link>
             <Link href={"#projects"}>
-            <button className="bg-black text-black px-6 py-3 rounded-md mr-4 bg-gradient-to-br from-gray-400 via-white hover:bg-white hover:text-black  mt-3">
+            <button className="bg-gradient-to-r from-[#3B82F6] to-[#1E3A8A] text-[#F8FAFC] px-6 py-3 rounded-md mr-4  transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 active:scale-95 mt-3">
               Projects
             </button>
             </Link>
           </div>
         </div>
-        <div className=" col-span-5 place-self-center mx-auto mt-4 lg:mt-0 overflow-hidden rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[400px] lg:w-[400px] ">
+        <div className=" col-span-5 place-self-center mx-auto mt-4 lg:mt-0 overflow-hidden rounded-full bg-blue-50 h-[250px] w-[250px] lg:h-[400px] lg:w-[400px] ">
           <div className="relative h-full w-full">
             <Image
               src="/photos/profile.png"

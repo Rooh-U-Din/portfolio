@@ -10,46 +10,60 @@ interface SocialIconProps {
 
 const Email = () => {
   return (
-    <section id="contact" className=" text-gray-300 py-16 border-gray-50">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-16">
-          Let`s Connect
+    // Background 60%: Off-White
+    <section
+      id="contact"
+      className="bg-[#F8FAFC] py-20 border-t border-slate-200"
+    >
+      <div className="container mx-auto px-6 lg:px-8">
+        {/* Heading 30%: Dark Blue */}
+        <h2 className="text-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#3B82F6] to-[#1E3A8A] bg-clip-text text-transparent mb-12 tracking-tight pb-2">
+          Let’s Connect
         </h2>
 
-        <div className="grid grid-cols-1 md:flex justify-between mx-4">
+        <div className="grid grid-cols-1 md:flex justify-between items-start gap-12">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-white">My Portfolio</h3>
-            <p className="text-gray-200 mb-6 max-w-md">
-              I`m currently seeking new opportunities, and my inbox is always
-              open. Whether you have a question or just want to say hello, I`ll
+            <h3 className="text-2xl font-bold text-[#1E3A8A]">My Portfolio</h3>
+            <p className="text-slate-600 mb-6 max-w-md leading-relaxed">
+              I’m currently seeking new opportunities, and my inbox is always
+              open. Whether you have a question or just want to say hello, I’ll
               do my best to get back to you promptly!
             </p>
           </div>
-          <div>
-            <h3 className="text-xl font-semibold text-white mb-6">
+
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+            <h3 className="text-xl font-bold text-[#1E3A8A] mb-6">
               Contact Me
             </h3>
 
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-6">
               <SocialIcon
                 href="https://github.com/Rooh-U-Din"
-                icon={<FaGithub size={20} />}
+                icon={<FaGithub size={22} />}
                 label="GitHub"
               />
               <SocialIcon
                 href="https://linkedin.com/in/your-username"
-                icon={<FaLinkedin size={20} />}
+                icon={<FaLinkedin size={22} />}
                 label="LinkedIn"
               />
               <SocialIcon
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=fidajokhio2@gmail.com"
-                icon={<FaEnvelope size={20} />}
+                icon={<FaEnvelope size={22} />}
                 label="Email"
               />
             </div>
-            <p className="text-blue-400 font-medium">
-              Available for freelance opportunities
-            </p>
+
+            {/* Accent 10%: Sky Blue */}
+            <div className="flex items-center space-x-2">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3B82F6] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-[#3B82F6]"></span>
+              </span>
+              <p className="text-[#3B82F6] font-bold text-sm uppercase tracking-wide">
+                Available for freelance
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -57,13 +71,13 @@ const Email = () => {
   );
 };
 
-// Reusable Social Icon Component
 const SocialIcon = ({ href, icon, label }: SocialIconProps) => (
   <Link
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="text-gray-400 hover:text-white transition-colors p-2 rounded-full hover:bg-gray-800"
+    // Icon theme: Dark Blue shifting to Sky Blue on hover
+    className="text-[#1E3A8A] hover:text-white transition-all duration-300 p-3 rounded-xl bg-slate-100 hover:bg-[#3B82F6] hover:shadow-lg hover:shadow-blue-500/30"
     aria-label={label}
   >
     {icon}

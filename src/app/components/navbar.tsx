@@ -15,92 +15,97 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // Handle scroll effect for glassmorphism
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-gray-900/90 backdrop-blur-md py-2 shadow-lg" : "bg-transparent py-4"
+    <header
+      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
+        scrolled
+          ? "py-3 bg-[#F8FAFC]/80 backdrop-blur-md shadow-sm"
+          : "py-6 bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between">
-          {/* Logo/Brand */}
+      <div className="container mx-auto px-4 md:px-12">
+        {/* Main Navbar Card - Inspired by Image 1 */}
+        <nav className="flex items-center justify-between bg-white/90 border border-slate-100 px-6 py-3 rounded-2xl shadow-sm">
+          {/* 1. PORTFOLIO TEXT (Gradient Styling) */}
           <Link href="/" className="group">
-            <motion.span 
-              className="text-3xl font-bold bg-gradient-to-r from-gray-300 to-white bg-clip-text text-transparent"
-              whileHover={{ scale: 1.05 }}
+            <motion.span
+              className="text-2xl font-extrabold bg-gradient-to-r from-[#3B82F6] to-[#1E3A8A] bg-clip-text text-transparent transition-all duration-300 ease-in-out cursor-pointer hover:drop-shadow-[0_5px_15px_rgba(59,130,246,0.3)] inline-block"
+              whileHover={{ scale: 1.05, y: -1 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Portfolio
+              PORTFOLIO
             </motion.span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:block">
-            <ul className="flex space-x-8">
-              {navLinks.map((link) => (
-                <li key={link.path}>
-                  <Link
-                    href={link.path}
-                    className="relative text-gray-300 hover:text-white transition-colors px-3 py-2 font-medium"
-                  >
-                    {link.title}
-                    <span className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-500 w-0 transition-all duration-300 group-hover:w-full"></span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          {/* 2. DESKTOP LINKS (Dark Blue) */}
+          <ul className="hidden md:flex items-center space-x-10">
+            {navLinks.map((link) => (
+              <li key={link.path}>
+                <Link
+                  href={link.path}
+                  className="text-[#1E3A8A] hover:text-[#3B82F6] transition-colors font-semibold text-sm uppercase tracking-wider"
+                >
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-          {/* Mobile Menu Button */}
+          {/* 3. CTA BUTTON (Professional Gradient) */}
+          <div className="hidden md:block">
+            <Link href="#contact">
+              <button className="bg-gradient-to-r from-[#3B82F6] to-[#1E3A8A] text-white px-8 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 active:scale-95">
+                Hire Me
+              </button>
+            </Link>
+          </div>
+
+          {/* MOBILE TOGGLE */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-300 hover:text-white focus:outline-none"
-            aria-label="Toggle menu"
+            className="md:hidden p-2 text-[#1E3A8A] hover:bg-slate-50 rounded-lg transition-colors"
           >
             {isOpen ? (
-              <XMarkIcon className="h-6 w-6" />
+              <XMarkIcon className="h-7 w-7" />
             ) : (
-              <Bars3Icon className="h-6 w-6" />
+              <Bars3Icon className="h-7 w-7" />
             )}
           </button>
-        </div>
+        </nav>
       </div>
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU OVERLAY */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden bg-gray-900/95 backdrop-blur-md"
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute top-full left-0 w-full bg-white border-b border-slate-100 shadow-xl md:hidden"
           >
-            <div className="container mx-auto px-6 py-4">
-              <ul className="flex flex-col space-y-4">
-                {navLinks.map((link) => (
-                  <motion.li
-                    key={link.path}
-                    whileHover={{ x: 5 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Link
-                      href={link.path}
-                      onClick={() => setIsOpen(false)}
-                      className="block text-gray-300 hover:text-white text-lg py-2 transition-colors"
-                    >
-                      {link.title}
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
+            <div className="flex flex-col p-6 space-y-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className="text-[#1E3A8A] font-bold text-lg border-b border-slate-50 pb-2"
+                >
+                  {link.title}
+                </Link>
+              ))}
+              <button className="w-full bg-[#3B82F6] text-white py-4 rounded-xl font-bold">
+                Hire Me
+              </button>
             </div>
           </motion.div>
         )}

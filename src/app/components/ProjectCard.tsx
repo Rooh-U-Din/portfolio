@@ -12,24 +12,42 @@ interface cards {
 
 const ProjectCard: React.FC<cards> = ({ imgUrl, title, description, previewUrl, gitUrl }) => {
   return (
-    <div className="relative group">
+    <div className="relative group rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+      {/* Image Container */}
       <div
-        className="h-52 md:h-72 relative w-full"
+        className="h-52 md:h-64 relative w-full"
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover", backgroundPosition: "center" }}
-      ></div>
-      
-      <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 gap-2">
-        <Link href={gitUrl} target="_blank" className="mb-28 h-14 w-14 border-2 relative rounded-full border-gray-400 hover:border-white">
-          <CodeBracketIcon className="h-10 w-10 text-gray-400 m-2 top-[35%] left-[35%] transform -translate-x-1/2 -translate-y-1/2 absolute cursor-pointer"></CodeBracketIcon>
-        </Link>
-        <Link href={previewUrl} target="_blank" className="mb-28 h-14 w-14 border-2 relative rounded-full border-gray-400 hover:border-white">
-          <EyeIcon className="h-10 w-10 text-gray-400 m-2 top-[35%] left-[35%] transform -translate-x-1/2 -translate-y-1/2 absolute cursor-pointer"></EyeIcon>
-        </Link>
+      >
+        {/* Overlay - Converted to Sky Blue Gradient/Glass style */}
+        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#3B82F6]/40 to-[#1E3A8A]/80 opacity-0 group-hover:opacity-100 flex transition-opacity duration-500 gap-4">
+          <Link 
+            href={gitUrl} 
+            target="_blank" 
+            className="h-12 w-12 border-2 flex items-center justify-center rounded-full border-white/60 text-white hover:border-white hover:bg-white/10 transition-all"
+          >
+            <CodeBracketIcon className="h-6 w-6" />
+          </Link>
+          <Link 
+            href={previewUrl} 
+            target="_blank" 
+            className="h-12 w-12 border-2 flex items-center justify-center rounded-full border-white/60 text-white hover:border-white hover:bg-white/10 transition-all"
+          >
+            <EyeIcon className="h-6 w-6" />
+          </Link>
+        </div>
       </div>
       
-      <div className="text-white rounded-b-xl bg-[#181818] py-6 px-4">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-gray-200">{description}</p>
+      {/* Text Content - Converted to Light Theme */}
+      <div className="bg-white py-6 px-5">
+        <h5 className="text-xl font-bold text-[#1E3A8A] mb-2 group-hover:text-[#3B82F6] transition-colors">
+          {title}
+        </h5>
+        <p className="text-slate-600 text-sm leading-relaxed">
+          {description}
+        </p>
+        
+        {/* Decorative accent bar (The 10% Sky Blue) */}
+        <div className="w-10 h-1 bg-[#3B82F6] mt-4 rounded-full" />
       </div>
     </div>
   );
